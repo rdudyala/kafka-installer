@@ -161,6 +161,8 @@ if [ $1 == "install" ] ; then
    install_openjdk_7_jdk
    install_zookeeper
    install_kafka
+   echo "Waiting for kafka and zookeeper to come up"
+   sleep 5
    /opt/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic ceilometer
 fi
 
