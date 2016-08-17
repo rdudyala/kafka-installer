@@ -8,7 +8,7 @@ sudo sed -i "s/.*127.0.0.1.*/127.0.0.1 localhost $(hostname)/" /etc/hosts
 
 function install_openjdk_7_jdk {
 
-    echo "Install Monasca openjdk_7_jdk"
+    echo "Install   openjdk_7_jdk"
 
     sudo apt-get -y install openjdk-7-jdk
 
@@ -16,7 +16,7 @@ function install_openjdk_7_jdk {
 
 function clean_openjdk_7_jdk {
 
-    echo "Clean Monasca openjdk_7_jdk"
+    echo "Clean   openjdk_7_jdk"
 
     sudo apt-get -y purge openjdk-7-jdk
 
@@ -26,7 +26,7 @@ function clean_openjdk_7_jdk {
 
 function install_zookeeper {
 
-    echo "Install Monasca Zookeeper"
+    echo "Install   Zookeeper"
 
     sudo apt-get -y install zookeeperd
 
@@ -53,7 +53,7 @@ function install_zookeeper {
 
 function clean_zookeeper {
 
-    echo "Clean Monasca Zookeeper"
+    echo "Clean   Zookeeper"
 
     sudo stop zookeeper || true
 
@@ -70,7 +70,7 @@ function clean_zookeeper {
 
 function install_kafka {
 
-    echo "Install Monasca Kafka"
+    echo "Install   Kafka"
 
     if [[ "$OFFLINE" != "True" ]]; then
         sudo curl http://apache.mirrors.tds.net/kafka/${BASE_KAFKA_VERSION}/kafka_${KAFKA_VERSION}.tgz \
@@ -133,7 +133,7 @@ function install_kafka {
 
 function clean_kafka {
 
-    echo "Clean Monasca Kafka"
+    echo "Clean   Kafka"
  
     sudo stop kafka || true
 
